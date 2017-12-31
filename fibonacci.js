@@ -27,3 +27,14 @@ console.log(serie.next().value)
 console.log(serie.next().value)
 console.log(serie.next().value)
 console.log(serie.next().value)
+
+console.log('Print making it iterable')
+
+const iterableSerie = {}
+iterableSerie[Symbol.iterator] = fibo
+
+for (const value of iterableSerie) {
+	if(value > 13) break
+
+	console.log(value)	
+}
